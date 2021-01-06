@@ -10,8 +10,9 @@ function App(props) {
   };
   const handleRemoveNote = (i) => {
     console.log(i);
-    let newNote = notes.filter((value, index, arr) => {
+    let newNote = notes.filter((value, index) => {
       if (index !== i) return value;
+      return null;
     });
     setNote([...newNote]);
   };
