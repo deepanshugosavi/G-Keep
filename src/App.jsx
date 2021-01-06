@@ -35,11 +35,6 @@ function App(props) {
             />
           );
         })}
-        {/* <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note /> */}
       </div>
     </div>
   );
