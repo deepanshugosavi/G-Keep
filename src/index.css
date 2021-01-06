@@ -1,13 +1,149 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f2f2f2;
+}
+.global__conatainer {
+  width: 100vw;
+
+  font-family: "Josefin Sans", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header__display {
+  width: 100vw;
+  height: 60px;
+  background-color: orangered;
+  display: flex;
+  align-items: center;
+  padding: 0 4vw;
+}
+.label__display {
+  font-size: large;
+  font-weight: 600;
+  margin-left: 10px;
+  color: #fff;
+}
+.input__display {
+  width: 100%;
+  display: flex;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.input__unactive {
+  width: 40%;
+  height: 16vh;
+  padding-top: 30px;
+  padding-left: 10px;
+  background-color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  color: gray;
+  font-size: 18px;
+  box-shadow: 1px 1px grey;
+  cursor: text;
+}
+
+.input__active {
+  width: 40%;
+  height: 40vh;
+  background-color: #fff;
+  font-size: 18px;
+  box-shadow: 1px 1px grey;
+  position: relative;
+}
+#title__input {
+  width: 100%;
+  padding: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+  font-family: "Josefin Sans", sans-serif;
+  outline: none;
+  border: 0px;
+}
+
+#note__input {
+  width: 100%;
+  height: 60%;
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Josefin Sans", sans-serif;
+  outline: none;
+  border: 0px;
+}
+
+.close__btn {
+  position: absolute;
+  bottom: 8px;
+  left: 4px;
+  padding: 8px 18px;
+  background-color: #fff;
+  color: orangered;
+  font-weight: 600;
+  font-size: 20px;
+  box-shadow: 1px 1px grey;
+  /* border-radius: 30px; */
+}
+
+.add__icon {
+  position: absolute;
+  right: 8px;
+  bottom: 4px;
+}
+
+.note__display {
+  width: 100%;
+  padding: 0 5vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card__display {
+  width: 30%;
+  height: 200px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 1px 1px grey;
+  position: relative;
+}
+.card__title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card__note {
+  font-size: 18px;
+  margin-top: 10px;
+}
+#delete__icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: white;
+  box-shadow: 1px 1px grey;
+  padding: 6px;
+}
+
+@media (max-width: 800px) {
+  .input__display {
+    justify-content: start;
+    margin-left: 20px;
+  }
+  .input__unactive {
+    width: 80%;
+    height: 14vh;
+  }
+  .input__active {
+    width: 80%;
+    height: 30vh;
+  }
+  .card__display {
+    width: 80%;
+  }
 }
