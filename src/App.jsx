@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AddNoteInput from "./AddNoteInput";
 import NavBar from "./NavBar";
 import Note from "./Note";
 
 function App(props) {
-  const [notes, setNote] = useState([]);
+  const [notes, setNote] = useState(
+    localStorage.getItem("notes")
+      ? JSON.parse(localStorage.getItem("notes"))
+      : []
+  );
+
+  useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
   const handleAddNote = (note) => {
     if (note.title !== "" && note.note_data !== "") setNote([...notes, note]);
   };
